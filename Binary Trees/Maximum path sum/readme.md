@@ -5,15 +5,11 @@
 **Link:** https://leetcode.com/problems/binary-tree-maximum-path-sum/
 
 ## Intuition
-At each node, we calculate:
-1. The best **downward path** from the left or right child (ignore negatives using max(0, x)).
-2. The best **path passing through the node** = left + right + node->val.  
-   This updates the global maximum.
-
-To the parent, we return only one side:
+At each node, we calculate two things:
+1. best which it can pass over to its parent
+2. update ans assuming max sum path passes through it.
 
 ## Approach
-- Use postorder DFS (left → right → node).
 - Compute left and right contributions.
 - Update global answer with "through node" path.
 - Return best downward path to parent.
