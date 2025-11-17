@@ -9,5 +9,5 @@
 1. If the index of cur node is x then left childs index is 2*x, and right childs is 2*x+1(just like in segment tree)
 2. To avoid overflows use normalization by doing cur = cur-mn[level]
 
-- **Time:** O(N)  
+- **Time:** O(NlogN)  
 - **Space:** O(N)(Auxilary space)
